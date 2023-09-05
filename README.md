@@ -33,6 +33,6 @@ https://github.com/milanhub007/LSTM-Forecasting/blob/main/Gale_Crater.csv
 **Reading data set**
 
 Used Pandas library to read the data.
-
+![alt text](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/data.jpg?raw=true)
 
 
