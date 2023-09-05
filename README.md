@@ -17,13 +17,17 @@ The project is written in python. I have written this notebook in a straightforw
 The data set used in this project is Mars weather data from Mars Science Laboratory Mission. Raw and processed data is provided by Planetary Data System which is a data archive of data products from all NASA’s planetary missions. I have also used data from USRA Houston Repository which provides the processed data. I have collected data from these data providers and combined it into a comma separated values format for this project.
 
 Following are the links to all data sets mentioned above:
+
 Planetary Data System:
+
 https://atmos.nmsu.edu/data_and_services/atmospheres_data/MARS/curiosity/curiosity.html
 
 USRA Houston Repository:
+
 https://atmos.nmsu.edu/data_and_services/atmospheres_data/MARS/curiosity/curiosity.html
 
 Data set:
+
 https://github.com/milanhub007/LSTM-Forecasting/blob/main/Gale_Crater.csv
 
 **Reading data set**
