@@ -1,5 +1,5 @@
 # LSTM-Forecasting
-**Forecasting Mars Dust Storms**
+# Forecasting Mars Dust Storms
 
 **Overview**
 
