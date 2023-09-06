@@ -35,4 +35,22 @@ https://github.com/milanhub007/LSTM-Forecasting/blob/main/Gale_Crater.csv
 Used Pandas library to read the data.
 ![alt text](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/data.jpg?raw=true)
 
+**Preparing the data**
 
+Basic preprocessing methods are used:
+
+Cleaning data: The missing values are managed using fillna method with rolling window and interpolate method.
+
+Exploratory Data Analysis: Visualization methods such as plots and heatmap to find the correlation between features.
+
+Features: As a part of analysis to features are set as the input features, which are Ultraviolet flux and optical depth.
+
+Scaling: Min max scaler is used to transform the features.
+
+Splitting the data: Entire data set is of 2500 Martian days. The data is split into 70 percent training, 10 percent validation and 20 percent testing set. The data set used previous 10 data points for
+prediction on each batch size.
+
+![alt text](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/shape.jpg?raw=true)
+
+**Model** 
+A function build_model with optimizer as input parameter is made. The architecture consists of the first LSTM layer with 128 batch size and second layer with 64 batch size. The final output layer has 2 units for two features. The return sequence is set for returning full sequence of hidden state on first layer and return sequence as false on second layer. Mean Squared Error is used as loss function. Keras regressor method is used which allows GridSearchCV for hyper tuning. I have provided batch size, number of epochs and optimizers as tuning parameters. Cross validation is set as 2. Adam and Adadelta is given as optimizers. In cv = 2, the data is divided into two equal-sized subsets. The model is trained on one subset and evaluated on the other, then the process is repeated with the roles of the two subsets reversed. The performance of the model is then averaged over the two folds to provide an estimate of its performance on unseen data.
