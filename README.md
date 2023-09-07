@@ -53,4 +53,34 @@ prediction on each batch size.
 ![alt ext](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/shape.jpg?raw=true)
 
 **Model** 
-A function build_model with optimizer as input parameter is made. The architecture consists of the first LSTM layer with 128 batch size and second layer with 64 batch size. The final output layer has 2 units for two features. The return sequence is set for returning full sequence of hidden state on first layer and return sequence as false on second layer. Mean Squared Error is used as loss function. Keras regressor method is used which allows GridSearchCV for hyper tuning. I have provided batch size, number of epochs and optimizers as tuning parameters. Cross validation is set as 2. Adam and Adadelta is given as optimizers. In cv = 2, the data is divided into two equal-sized subsets. The model is trained on one subset and evaluated on the other, then the process is repeated with the roles of the two subsets reversed. The performance of the model is then averaged over the two folds to provide an estimate of its performance on unseen data.
+
+A function build_model with optimizer as input parameter is made. The architecture consists of the first LSTM layer with 128 batch size and second layer with 64 batch size. The final output layer has 2 units for two features. The return sequence is set for returning full sequence of hidden state on first layer and return sequence as false on second layer. Mean Squared Error is used as loss function.
+
+Keras regressor method is used which allows GridSearchCV for hyper tuning. I have provided batch size, number of epochs and optimizers as tuning parameters. Cross validation is set as 2. Adam and Adadelta is given as optimizers.
+
+In cv = 2, the data is divided into two equal-sized subsets. The model is trained on one subset and evaluated on the other, then the process is repeated with the roles of the two subsets reversed. The performance of the model is then averaged over the two folds to provide an estimate of its performance on unseen data.
+
+![alt xt](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/model.jpg?raw=true)
+
+**Results**
+
+GridsearchCV has provided batch size 20, epochs 20 and Aadam optimizer as best parameters.
+
+Model is trained on training and validation set with a loss of 0.0025 and validation loss of 0.0013.
+
+The model is tested on the testing set and evaluation metrics are used to find the performance of the model on unseen data. 
+
+Mean Absolute Error is 0.103
+
+Mean Squared Error is 0.054
+
+Root Mean Squared Error is 0.232
+
+The R2 score (coefficient of determination) is used as the metric to evaluate the performance of whole model. R2 score is 0.912.
+
+Forecast is made for next 20 days and visualizations are made.
+
+![alt t](https://github.com/milanhub007/LSTM-Forecasting/blob/main/Images/forecast.png?raw=true)
+
+
+
